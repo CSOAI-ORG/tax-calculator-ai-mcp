@@ -1,3 +1,23 @@
 name: tax-calculator-ai-mcp
-description: MEOK AI Labs - Utax calculator ai
+description: Estimate income tax liability across multiple jurisdictions with support
+  for brackets, deductions, and effective rate calculations.
 version: 1.0.0
+tools:
+- name: calculate_income_tax
+  description: ''
+  parameters:
+  - name: country
+    type: string
+    required: true
+  - name: income
+    type: number
+    required: true
+- name: vat_calculator
+  description: ''
+  parameters:
+  - name: amount
+    type: number
+    required: true
+  - name: vat_rate
+    type: number
+    required: false

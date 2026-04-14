@@ -1,6 +1,44 @@
 {
   "name": "tax-calculator-ai-mcp",
-  "description": "MEOK AI Labs Utax calculator ai",
+  "description": "Estimate income tax liability across multiple jurisdictions with support for brackets, deductions, and effective rate calculations.",
   "version": "1.0.0",
-  "author": "MEOK AI Labs"
+  "tools": [
+    {
+      "name": "calculate_income_tax",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          },
+          "income": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "country",
+          "income"
+        ]
+      }
+    },
+    {
+      "name": "vat_calculator",
+      "description": "",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "amount": {
+            "type": "number"
+          },
+          "vat_rate": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "amount"
+        ]
+      }
+    }
+  ]
 }

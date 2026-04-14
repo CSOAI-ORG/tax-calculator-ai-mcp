@@ -1,18 +1,16 @@
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
-
 [project]
 name = "tax-calculator-ai-mcp"
-version = "0.1.0"
-description = "Estimate income tax liability across multiple jurisdictions with support for brackets, deductions, and effective rate calculations."
-readme = "README.md"
-license = {text = "MIT"}
+version = "1.0.0"
+description = "MEOK AI Labs — tax-calculator-ai-mcp"
+license = {file = "LICENSE"}
 requires-python = ">=3.10"
-dependencies = [
-    "mcp>=1.0.0",
-    "pydantic>=2.0",
-]
-
-[project.scripts]
-tax_calculator_ai_mcp = "tax_calculator_ai_mcp.server:main"
+authors = [{name = "MEOK AI Labs", email = "nicholas@meok.ai"}]
+dependencies = ["mcp>=1.0.0"]
+[project.urls]
+Homepage = "https://meok.ai"
+[tool.hatch.build.targets.wheel]
+packages = ["."]
+only-include = ["server.py"]

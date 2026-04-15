@@ -1,6 +1,6 @@
 name: tax-calculator-ai-mcp
-description: Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and
-  capital gains tax. Provides e
+description: AI-powered tax calculator ai MCP server for agents. Supports calculate
+  income tax, calculate vat, estimate corporation tax. By MEOK AI Labs.
 version: 1.0.0
 tools:
 - name: calculate_income_tax

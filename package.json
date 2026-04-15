@@ -1,7 +1,7 @@
 {
   "name": "tax-calculator-ai-mcp",
   "version": "1.0.0",
-  "description": "MEOK AI Labs MCP Server: tax-calculator-ai-mcp",
+  "description": "AI-powered tax calculator ai MCP server for agents. Supports calculate income tax, calculate vat, estimate corporation tax. By MEOK AI Labs.",
   "main": "server.py",
   "scripts": {
     "start": "python server.py"

@@ -1,0 +1,58 @@
+{
+  "name": "tax-calculator-ai",
+  "description": "Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.",
+  "version": "1.0.0",
+  "protocol_version": "2025-11-25",
+  "publisher": {
+    "name": "MEOK AI Labs",
+    "url": "https://meok.ai",
+    "email": "nicholas@meok.ai"
+  },
+  "repository": "https://github.com/CSOAI-ORG/tax-calculator-ai-mcp",
+  "license": "MIT",
+  "transport": [
+    "stdio",
+    "streamable-http"
+  ],
+  "authentication": {
+    "type": "api-key",
+    "free_tier": true,
+    "free_limit": "15 calls/day"
+  },
+  "tools": [
+    {
+      "name": "calculate_income_tax",
+      "description": "Calculate income tax using UK or US progressive tax brackets."
+    },
+    {
+      "name": "calculate_vat",
+      "description": "Calculate EU/UK VAT by country. Rate types: standard, reduced, zero."
+    },
+    {
+      "name": "estimate_corporation_tax",
+      "description": "Estimate UK corporation tax including marginal relief calculations."
+    },
+    {
+      "name": "calculate_capital_gains",
+      "description": "Calculate UK Capital Gains Tax. Asset types: residential, other."
+    },
+    {
+      "name": "get_tax_deadlines",
+      "description": "Get upcoming tax filing and payment deadlines for UK or US."
+    }
+  ],
+  "categories": [
+    "AI & Machine Learning",
+    "Developer Tools",
+    "Finance & Fintech"
+  ],
+  "pricing": {
+    "free": {
+      "calls_per_day": 15
+    },
+    "pro": {
+      "price": "$29/month",
+      "url": "https://meok.ai/pricing"
+    }
+  }
+}

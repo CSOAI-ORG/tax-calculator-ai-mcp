@@ -1,23 +1,65 @@
 name: tax-calculator-ai-mcp
-description: Estimate income tax liability across multiple jurisdictions with support
-  for brackets, deductions, and effective rate calculations.
+description: Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and
+  capital gains tax. Provides e
 version: 1.0.0
 tools:
 - name: calculate_income_tax
-  description: ''
+  description: Calculate income tax using UK or US progressive tax brackets.
   parameters:
-  - name: country
-    type: string
-    required: true
   - name: income
     type: number
     required: true
-- name: vat_calculator
-  description: ''
+  - name: country
+    type: string
+    required: false
+  - name: filing_status
+    type: string
+    required: false
+  - name: include_ni
+    type: boolean
+    required: false
+- name: calculate_vat
+  description: 'Calculate EU/UK VAT by country. Rate types: standard, reduced, zero.'
   parameters:
   - name: amount
     type: number
     required: true
-  - name: vat_rate
+  - name: country
+    type: string
+    required: false
+  - name: rate_type
+    type: string
+    required: false
+  - name: is_inclusive
+    type: boolean
+    required: false
+- name: estimate_corporation_tax
+  description: Estimate UK corporation tax including marginal relief calculations.
+  parameters:
+  - name: profit
     type: number
+    required: true
+  - name: financial_year
+    type: string
+    required: false
+  - name: is_associated
+    type: boolean
+    required: false
+- name: calculate_capital_gains
+  description: 'Calculate UK Capital Gains Tax. Asset types: residential, other.'
+  parameters:
+  - name: gain
+    type: number
+    required: true
+  - name: asset_type
+    type: string
+    required: false
+  - name: annual_income
+    type: number
+    required: false
+- name: get_tax_deadlines
+  description: Get upcoming tax filing and payment deadlines for UK or US.
+  parameters:
+  - name: country
+    type: string
     required: false

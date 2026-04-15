@@ -103,7 +103,7 @@ TAX_DEADLINES = {
     ],
 }
 
-mcp = FastMCP("tax-calculator-ai-mcp", instructions="Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.")
+mcp = FastMCP("tax-calculator-ai", instructions="Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.")
 
 
 def _calculate_banded_tax(income: float, bands: list) -> list:
@@ -130,7 +130,7 @@ def _calculate_banded_tax(income: float, bands: list) -> list:
 
 
 @mcp.tool()
-async def calculate_income_tax(income: float, country: str = "uk", filing_status: str = "single", include_ni: bool = True, api_key: str = "") -> str:
+def calculate_income_tax(income: float, country: str = "uk", filing_status: str = "single", include_ni: bool = True, api_key: str = "") -> str:
     """Calculate income tax using UK or US progressive tax brackets."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -210,7 +210,7 @@ async def calculate_income_tax(income: float, country: str = "uk", filing_status
 
 
 @mcp.tool()
-async def calculate_vat(amount: float, country: str = "uk", rate_type: str = "standard", is_inclusive: bool = False, api_key: str = "") -> str:
+def calculate_vat(amount: float, country: str = "uk", rate_type: str = "standard", is_inclusive: bool = False, api_key: str = "") -> str:
     """Calculate EU/UK VAT by country. Rate types: standard, reduced, zero."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -257,7 +257,7 @@ async def calculate_vat(amount: float, country: str = "uk", rate_type: str = "st
 
 
 @mcp.tool()
-async def estimate_corporation_tax(profit: float, financial_year: str = "2025", is_associated: bool = False, api_key: str = "") -> str:
+def estimate_corporation_tax(profit: float, financial_year: str = "2025", is_associated: bool = False, api_key: str = "") -> str:
     """Estimate UK corporation tax including marginal relief calculations."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -323,7 +323,7 @@ async def estimate_corporation_tax(profit: float, financial_year: str = "2025", 
 
 
 @mcp.tool()
-async def calculate_capital_gains(gain: float, asset_type: str = "other", annual_income: float = 0, api_key: str = "") -> str:
+def calculate_capital_gains(gain: float, asset_type: str = "other", annual_income: float = 0, api_key: str = "") -> str:
     """Calculate UK Capital Gains Tax. Asset types: residential, other."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
@@ -387,7 +387,7 @@ async def calculate_capital_gains(gain: float, asset_type: str = "other", annual
 
 
 @mcp.tool()
-async def get_tax_deadlines(country: str = "uk", api_key: str = "") -> str:
+def get_tax_deadlines(country: str = "uk", api_key: str = "") -> str:
     """Get upcoming tax filing and payment deadlines for UK or US."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:

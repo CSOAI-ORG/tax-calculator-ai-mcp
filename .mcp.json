@@ -1,43 +1,109 @@
 {
   "name": "tax-calculator-ai-mcp",
-  "description": "Estimate income tax liability across multiple jurisdictions with support for brackets, deductions, and effective rate calculations.",
+  "description": "> **By [MEOK AI Labs](https://meok.ai)** \u2014 Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides e",
   "version": "1.0.0",
   "tools": [
     {
       "name": "calculate_income_tax",
-      "description": "",
+      "description": "Calculate income tax using UK or US progressive tax brackets.",
       "parameters": {
         "type": "object",
         "properties": {
+          "income": {
+            "type": "number"
+          },
           "country": {
             "type": "string"
           },
-          "income": {
-            "type": "number"
+          "filing_status": {
+            "type": "string"
+          },
+          "include_ni": {
+            "type": "boolean"
           }
         },
         "required": [
-          "country",
           "income"
         ]
       }
     },
     {
-      "name": "vat_calculator",
-      "description": "",
+      "name": "calculate_vat",
+      "description": "Calculate EU/UK VAT by country. Rate types: standard, reduced, zero.",
       "parameters": {
         "type": "object",
         "properties": {
           "amount": {
             "type": "number"
           },
-          "vat_rate": {
-            "type": "number"
+          "country": {
+            "type": "string"
+          },
+          "rate_type": {
+            "type": "string"
+          },
+          "is_inclusive": {
+            "type": "boolean"
           }
         },
         "required": [
           "amount"
         ]
+      }
+    },
+    {
+      "name": "estimate_corporation_tax",
+      "description": "Estimate UK corporation tax including marginal relief calculations.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "profit": {
+            "type": "number"
+          },
+          "financial_year": {
+            "type": "string"
+          },
+          "is_associated": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "profit"
+        ]
+      }
+    },
+    {
+      "name": "calculate_capital_gains",
+      "description": "Calculate UK Capital Gains Tax. Asset types: residential, other.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "gain": {
+            "type": "number"
+          },
+          "asset_type": {
+            "type": "string"
+          },
+          "annual_income": {
+            "type": "number"
+          }
+        },
+        "required": [
+          "gain"
+        ]
+      }
+    },
+    {
+      "name": "get_tax_deadlines",
+      "description": "Get upcoming tax filing and payment deadlines for UK or US.",
+      "parameters": {
+        "type": "object",
+        "properties": {
+          "country": {
+            "type": "string"
+          }
+        },
+        "required": []
       }
     }
   ]

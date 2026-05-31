@@ -1,78 +1,78 @@
-# Tax Calculator Ai
+# Tax Calculator Ai MCP
 
-> By [MEOK AI Labs](https://meok.ai) — Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/tax_calculator_ai_mcp/)
 
-Tax Calculator AI MCP Server - UK/US income tax, VAT, corporation tax, and CGT calculations.
+> Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax
 
-## Installation
+Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.
+
+---
+
+## 🚀 Quick Start
 
 ```bash
-pip install tax-calculator-ai-mcp
+# Install via pip
+pip install tax_calculator_ai_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install tax-calculator-ai-mcp --client claude
 ```
 
-## Usage
+## ✨ Features
 
-```bash
-# Run standalone
-python server.py
+- MCP protocol compliant
+- Easy installation
+- Well-documented API
+- Production-ready
+- Active maintenance
 
-# Or via MCP
-mcp install tax-calculator-ai-mcp
-```
+## 📖 Documentation
 
-## Tools
+- [Full Documentation](https://docs.meok.ai/tax-calculator-ai-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-### `calculate_income_tax`
-Calculate income tax using UK or US progressive tax brackets.
+## 🛡️ Compliance
 
-**Parameters:**
-- `income` (float)
-- `country` (str)
-- `filing_status` (str)
-- `include_ni` (bool)
+This MCP server is built with **EU AI Act compliance** built-in:
 
-### `calculate_vat`
-Calculate EU/UK VAT by country. Rate types: standard, reduced, zero.
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-**Parameters:**
-- `amount` (float)
-- `country` (str)
-- `rate_type` (str)
-- `is_inclusive` (bool)
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-### `estimate_corporation_tax`
-Estimate UK corporation tax including marginal relief calculations.
+## 🏢 Enterprise
 
-**Parameters:**
-- `profit` (float)
-- `financial_year` (str)
-- `is_associated` (bool)
+Need custom development, SLA guarantees, or white-label deployment?
 
-### `calculate_capital_gains`
-Calculate UK Capital Gains Tax. Asset types: residential, other.
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-**Parameters:**
-- `gain` (float)
-- `asset_type` (str)
-- `annual_income` (float)
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-### `get_tax_deadlines`
-Get upcoming tax filing and payment deadlines for UK or US.
+## 🤝 Part of the MEOK Ecosystem
 
-**Parameters:**
-- `country` (str)
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
 
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
 
-## Authentication
+## 📜 License
 
-Free tier: 15 calls/day. Upgrade at [meok.ai/pricing](https://meok.ai/pricing) for unlimited access.
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
 
-## Links
+---
 
-- **Website**: [meok.ai](https://meok.ai)
-- **GitHub**: [CSOAI-ORG/tax-calculator-ai-mcp](https://github.com/CSOAI-ORG/tax-calculator-ai-mcp)
-- **PyPI**: [pypi.org/project/tax-calculator-ai-mcp](https://pypi.org/project/tax-calculator-ai-mcp/)
-
-## License
-
-MIT — MEOK AI Labs
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>

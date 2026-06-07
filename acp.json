@@ -1,0 +1,23 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "tax-calculator-ai-mcp",
+    "description": "AI-powered tax calculator ai MCP server for agents. Supports calculate income tax, calculate vat",
+    "version": "1.0.4",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "tax-calculator-ai-mcp"
+      }
+    ],
+    "capabilities": [
+      "calculate_income_tax",
+      "calculate_vat",
+      "estimate_corporation_tax",
+      "calculate_capital_gains",
+      "get_tax_deadlines"
+    ]
+  }
+}

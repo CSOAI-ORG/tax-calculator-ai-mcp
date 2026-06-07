@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Tax Calculator AI MCP Server - UK/US income tax, VAT, corporation tax, and CGT calculations."""
+"""
+Tax Calculator AI MCP Server - UK/US income tax, VAT, corporation tax, and CGT calculations."""
 
 import sys, os
-sys.path.insert(0, os.path.expanduser('~/clawd/meok-labs-engine/shared'))
 from auth_middleware import check_access
 
 import json, time
@@ -134,7 +134,7 @@ def calculate_income_tax(income: float, country: str = "uk", filing_status: str 
     """Calculate income tax using UK or US progressive tax brackets."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -214,7 +214,7 @@ def calculate_vat(amount: float, country: str = "uk", rate_type: str = "standard
     """Calculate EU/UK VAT by country. Rate types: standard, reduced, zero."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -261,7 +261,7 @@ def estimate_corporation_tax(profit: float, financial_year: str = "2025", is_ass
     """Estimate UK corporation tax including marginal relief calculations."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -327,7 +327,7 @@ def calculate_capital_gains(gain: float, asset_type: str = "other", annual_incom
     """Calculate UK Capital Gains Tax. Asset types: residential, other."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -391,7 +391,7 @@ def get_tax_deadlines(country: str = "uk", api_key: str = "") -> str:
     """Get upcoming tax filing and payment deadlines for UK or US."""
     allowed, msg, tier = check_access(api_key)
     if not allowed:
-        return json.dumps({"error": msg, "upgrade_url": "https://meok.ai/pricing"})
+        return json.dumps({"error": msg, "upgrade_url": "https://councilof.ai"})
     if not _check_rate(api_key or "anon"):
         return json.dumps({"error": "Rate limit exceeded. Try again in 60 seconds."})
 
@@ -425,5 +425,8 @@ def get_tax_deadlines(country: str = "uk", api_key: str = "") -> str:
     })
 
 
-if __name__ == "__main__":
+def main():
     mcp.run()
+
+if __name__ == '__main__':
+    main()

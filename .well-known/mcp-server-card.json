@@ -1,0 +1,28 @@
+{
+  "name": "tax-calculator-ai-mcp",
+  "title": "Tax Calculator Ai Mcp",
+  "description": "AI-powered tax calculator ai MCP server for agents. Supports calculate income tax, calculate vat, estimate corporation tax. By MEOK AI Labs.",
+  "version": "1.0.4",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "calculate_income_tax"
+    },
+    {
+      "name": "calculate_vat"
+    },
+    {
+      "name": "estimate_corporation_tax"
+    },
+    {
+      "name": "calculate_capital_gains"
+    },
+    {
+      "name": "get_tax_deadlines"
+    }
+  ]
+}

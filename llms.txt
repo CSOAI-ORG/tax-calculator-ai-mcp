@@ -1,0 +1,36 @@
+# tax-calculator-ai-mcp
+# > By [MEOK AI Labs](https://meok.ai) — Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.
+
+## Install
+```bash
+pip install tax-calculator-ai-mcp
+```
+
+## Auth & Rate Limits
+- Free tier: 10 calls/day. No API key required.
+- Pro tier (£79/mo): unlimited + signed attestations.
+- Enterprise (£1,499/mo): white-label.
+
+## Tools
+
+### `calculate_income_tax`
+Calculate income tax using UK or US progressive tax brackets.
+
+### `calculate_vat`
+Calculate EU/UK VAT by country. Rate types: standard, reduced, zero.
+
+### `estimate_corporation_tax`
+Estimate UK corporation tax including marginal relief calculations.
+
+### `calculate_capital_gains`
+Calculate UK Capital Gains Tax. Asset types: residential, other.
+
+### `get_tax_deadlines`
+Get upcoming tax filing and payment deadlines for UK or US.
+
+
+## Maintainer
+MEOK AI Labs · hello@meok.ai · https://meok.ai · MIT licensed
+
+## Pairs with
+Governance moat: pair this tool with any of MEOK's 38 governance MCPs (EU AI Act, DORA, NIS2, CRA, GDPR, ISO 42001, etc.) for full compliance coverage.

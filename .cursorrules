@@ -1,0 +1,9 @@
+# tax-calculator-ai-mcp - Auto-trigger Rules
+
+When the user asks about tax calculator, use tax-calculator-ai-mcp tools: calculate_income_tax, calculate_vat, estimate_corporation_tax, calculate_capital_gains, get_tax_deadlines
+
+> By [MEOK AI Labs](https://meok.ai) — Calculate income tax (UK/US brackets), EU VAT, UK corporation tax, and capital gains tax. Provides estimates only - not professional tax advice.
+
+Install: `pip install tax-calculator-ai-mcp`
+
+By MEOK AI Labs — MIT licensed.

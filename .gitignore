@@ -4,3 +4,9 @@ __pycache__/
 *.egg-info/
 .dist/
 build/
+
+# Auto-added during alignment sweep
+dist/tax_calculator_ai_mcp-1.0.6-py3-none-any.whl
+dist/tax_calculator_ai_mcp-1.0.6.tar.gz
+dist/tax_calculator_ai_mcp-1.0.9-py3-none-any.whl
+dist/tax_calculator_ai_mcp-1.0.9.tar.gz

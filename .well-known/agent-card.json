@@ -1,0 +1,117 @@
+{
+  "name": "Tax Calculator Ai Mcp",
+  "version": "1.0.4",
+  "url": "https://mcp.meok.ai/tax-calculator-ai-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "AI-powered tax calculator ai MCP server for agents. Supports calculate income tax, calculate vat, estimate corporation tax. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "calculate_income_tax",
+      "name": "Calculate Income Tax",
+      "description": "Calculate Income Tax — a tool of the tax-calculator-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "calculate_vat",
+      "name": "Calculate Vat",
+      "description": "Calculate Vat — a tool of the tax-calculator-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "estimate_corporation_tax",
+      "name": "Estimate Corporation Tax",
+      "description": "Estimate Corporation Tax — a tool of the tax-calculator-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "calculate_capital_gains",
+      "name": "Calculate Capital Gains",
+      "description": "Calculate Capital Gains — a tool of the tax-calculator-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "get_tax_deadlines",
+      "name": "Get Tax Deadlines",
+      "description": "Get Tax Deadlines — a tool of the tax-calculator-ai-mcp MCP.",
+      "tags": [
+        "mcp",
+        "meok"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "tax-calculator-ai-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
